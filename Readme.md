@@ -43,16 +43,21 @@ processEmails
 Premi Esegui.
 La prima volta ti chiederà i permessi (clicca su "Vedi dettagli" > "Vai a ... (non sicuro)" > "Consenti").
 Controlla il tuo foglio: dovresti vedere i dati estratti!
-6. Automazione (Opzionale)
-Se vuoi che lo script giri da solo ogni ora:
+6. Automazione
+Per far girare lo script automaticamente ogni giorno alle 9:00:
 
-Clicca sull'icona Sveglia (Attivatori/Triggers) nel menu a sinistra.
-Clicca Aggiungi Attivatore.
-Funzione: 
-processEmails
-.
-Fonte evento: Vincolato al tempo.
-Tipo timer: Timer orario -> Ogni ora.
+Nell'editor Apps Script, seleziona la funzione `createDailyTrigger` dal menù a tendina.
+Clicca **Esegui**.
+Concedi i permessi se richiesto.
+
+Fatto! Ora lo script `processEmails` verrà eseguito automaticamente ogni mattina tra le 9 e le 10.
+
+📊 Come controllare i Log
+Per vedere se lo script ha girato correttamente:
+1. Nel menu a sinistra dell'editor, clicca sull'icona **Esecuzioni** (tre linee orizzontali).
+2. Qui vedrai la lista di tutte le volte che lo script è partito.
+3. Cliccando su una riga, puoi leggere i dettagli (es. "[OK] Inserito: TicketOne...").
+
 🛠️ Come personalizzare l'estrazione dati
 La parte "intelligente" è nella funzione 
 extractData()
